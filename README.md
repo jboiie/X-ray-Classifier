@@ -226,9 +226,9 @@ jupyter notebook xray_cnn_classifier.ipynb
 
 ## 📧 Contact
 For questions, collaboration, or technical support:
-- **Email:** [your.email@domain.com](mailto:jai19kharb@gmail.com)
-- **GitHub:** [Your GitHub Profile](https://github.com/jboiie)
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/jaikharb)
+- **Email:** [jai19kharb@gmail.com](mailto:jai19kharb@gmail.com)
+- **GitHub:** [github.com/jboiie](https://github.com/jboiie)
+- **LinkedIn:** [linkedin.com/in/jaikharb](https://linkedin.com/in/jaikharb)
 - **Live Demo:** [Hugging Face Spaces](https://huggingface.co/spaces/jboiie/X-ray-Classifier)
 
 ---
