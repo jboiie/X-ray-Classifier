@@ -2,7 +2,6 @@
 A deep learning project for automated pneumonia detection in chest X-ray images using convolutional neural networks (CNNs) with 88.46% F1-score performance.
 
 ---
-
 ## 🩺 Project Overview
 Pneumonia is a leading cause of death worldwide, especially in children and elderly populations. Rapid and accurate diagnosis is critical for effective treatment.
 This project implements an AI-powered solution using deep learning to automatically detect pneumonia from chest X-ray images, achieving professional-grade accuracy that can assist healthcare providers in screening and diagnosis.
