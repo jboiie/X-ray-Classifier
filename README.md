@@ -90,9 +90,6 @@ Input Layer (128×128×3)
 
 ## 🚀 Deployment
 
-### Live Demo
-**Hugging Face Spaces:** [X-Ray Pneumonia Detection](https://huggingface.co/spaces/jboiie/X-ray-Classifier)
-
 ### Features
 - **Professional Medical UI:** Clean, healthcare-focused interface
 - **Real-time Analysis:** Upload X-ray → Get instant diagnosis
