@@ -8,21 +8,20 @@ import matplotlib.pyplot as plt
 import os
 import warnings
 
-# Suppress warnings
+
 warnings.filterwarnings('ignore')
 
-# CPU optimization for Streamlit - 80% usage limit
+
 tf.config.threading.set_inter_op_parallelism_threads(4)   # Light for inference
 tf.config.threading.set_intra_op_parallelism_threads(6)   # UI responsiveness
 
-# Page configuration
+
 st.set_page_config(
     page_title="X-Ray Pneumonia Detection",
     page_icon="🩺",
     layout="wide"
 )
 
-# Custom CSS
 st.markdown("""
 <style>
     .main-header {
@@ -80,7 +79,7 @@ def load_metrics():
                 metrics = pickle.load(f)
             return metrics
         else:
-            # Return default metrics if file not found
+            
             return {
                 'accuracy': 0.8478,
                 'precision': 0.8406,
@@ -90,12 +89,14 @@ def load_metrics():
     except Exception as e:
         st.error(f"❌ Error loading metrics: {str(e)}")
         return None
+    
+    # preprocessing the image to match saved model input down below
 
 def preprocess_image(image):
-    """Resize images to 128x128 to match saved model input"""
+    
     try:
-        # Resize to 128x128 (matches your saved model)
-        image = image.resize((128, 128))  # Fixed: Changed from (150, 150)
+        # Resize to 128x128 
+        image = image.resize((128, 128))  
         
         # Convert to RGB if needed
         if image.mode != 'RGB':
