@@ -9,10 +9,10 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # 4. Install system dependencies
+# 4. Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
-    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # 5. Copy requirements first (for caching)
