@@ -18,7 +18,7 @@ tf.config.threading.set_intra_op_parallelism_threads(6)   # UI responsiveness
 
 st.set_page_config(
     page_title="X-Ray Pneumonia Detection",
-    page_icon="🩺",
+    page_icon="#",
     layout="wide"
 )
 
@@ -63,10 +63,10 @@ def load_model():
             model = keras.models.load_model(model_path)
             return model
         else:
-            st.error(f"❌ Model not found at {model_path}! Please check the file path.")
+            st.error(f" Model not found at {model_path}! Please check the file path.")
             return None
     except Exception as e:
-        st.error(f"❌ Error loading model: {str(e)}")
+        st.error(f" Error loading model: {str(e)}")
         return None
 
 @st.cache_data
@@ -87,7 +87,7 @@ def load_metrics():
                 'f1_score': 0.8846
             }
     except Exception as e:
-        st.error(f"❌ Error loading metrics: {str(e)}")
+        st.error(f" Error loading metrics: {str(e)}")
         return None
     
     # preprocessing the image to match saved model input down below
@@ -143,13 +143,13 @@ def main():
         st.stop()
     
     # Sidebar with performance info
-    st.sidebar.header("📊 Model Information")
-    st.sidebar.info("🚀 **Professional CNN Model**\n\n✅ 88.46% F1-Score\n✅ Resource-optimized\n✅ 128×128 processing")
+    st.sidebar.header(" Model Information")
+    st.sidebar.info(" **Professional CNN Model**\n\n✅ 88.46% F1-Score\n✅ Resource-optimized\n✅ 128×128 processing")
     
     # Load and display metrics
     metrics = load_metrics()
     if metrics:
-        st.sidebar.subheader("🎯 Performance Metrics")
+        st.sidebar.subheader(" Performance Metrics")
         st.sidebar.markdown(f"""
         <div class="metric-card">
             <strong>Accuracy:</strong> {metrics['accuracy']:.3f}<br>
@@ -315,16 +315,7 @@ def main():
         st.metric("F1-Score", f"{metrics['f1_score']:.1%}" if metrics else "88.5%")
         st.metric("Inference", "< 2 sec")
     
-    # Footer
-    st.markdown("---")
-    st.markdown("""
-    <div style='text-align: center'>
-        <p><strong>🩺 X-Ray Pneumonia Detection System</strong></p>
-        <p>Built with ❤️ using TensorFlow, Keras & Streamlit</p>
-        <p><em>Professional CNN • 88.46% F1-Score • Resource-optimized • Medical AI Demo</em></p>
-        <p><small>⚡ Powered by deep learning for fast, accurate chest X-ray analysis</small></p>
-    </div>
-    """, unsafe_allow_html=True)
+    
 
 if __name__ == "__main__":
     main()
