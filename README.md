@@ -52,9 +52,11 @@ Instead of using a massive pre-trained model like ResNet50 (100MB+), I designed 
 
 *Proof of "Sub-2-Second" Inference on a standard laptop CPU:*
 
-![Inference Demo]([INSERT YOUR GIF LINK HERE])
-*(Note: Upload your GIF to the repo and link it here)*
+![Training History](models/training_history.png)
 
+![Sample X-ray Images](models/sample_predictions.png)
+
+![Streamlit Interface](images/ui-screenshot.png)
 ---
 
 ## 🚀 How to Run
