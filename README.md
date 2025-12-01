@@ -1,3 +1,6 @@
+![CI Pipeline](https://github.com/jboiie/X-ray-Classifier/actions/workflows/main.yml/badge.svg)
+
+
 # X-Ray Pneumonia Detection
 A deep learning project for automated pneumonia detection in chest X-ray images using convolutional neural networks (CNNs) with 88.46% F1-score performance.
 
